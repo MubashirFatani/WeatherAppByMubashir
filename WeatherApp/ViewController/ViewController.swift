@@ -37,8 +37,8 @@ class ViewController: UIViewController {
         }
     }
     func updateUI() {
-           if let temperature = getCurrentDataObj?.main.temp {
-               let temperatureInCelsius = temperature - 273.15
+           if let currentTemperature = getCurrentDataObj?.main.temp {
+               let temperatureInCelsius = currentTemperature - 273.15
                let formattedTemperature = String(format: "%.2f", temperatureInCelsius)
                lblTemperature.text = "\(formattedTemperature) °C"
            } else {
